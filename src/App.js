@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({ todos: newTodos })
   }
 
-  updateTodo = (updatedTodo, index) => {
+  saveTodo = (updatedTodo, index) => {
     let newTodos = this.state.todos.map((ele, id) => {
       if (id === index) {
         return updatedTodo
@@ -41,7 +41,7 @@ class App extends Component {
         <p>Current To Do List: </p>
         <Todos todos={this.state.todos}
           deleteTodo={this.deleteTodo}
-          saveTodo={this.updateTodo}
+          saveTodo={this.saveTodo}
         />
       </main>
     );
